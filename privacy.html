@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Roster by Anits</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #ffffff;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: #1D9E75;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #085041;
+    }
+    .badge {
+      display: inline-block;
+      background: #E1F5EE;
+      color: #085041;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #085041;
+      margin-bottom: 8px;
+    }
+    .updated {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #085041;
+      margin: 36px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8f5f0;
+    }
+    p { margin-bottom: 14px; color: #333; }
+    ul {
+      margin: 0 0 14px 20px;
+      color: #333;
+    }
+    li { margin-bottom: 6px; }
+    a { color: #1D9E75; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .highlight {
+      background: #f0faf5;
+      border-left: 3px solid #1D9E75;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    .highlight p { margin: 0; color: #085041; font-weight: 500; }
+    .contact-box {
+      background: #f7f6f3;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+    .contact-box h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <div class="logo-mark">R</div>
+    <span class="logo-text">Roster · by Anits</span>
+  </div>
+
+  <span class="badge">Privacy Policy</span>
+  <h1>Your privacy matters</h1>
+  <p class="updated">Last updated: 1 June 2025 · Effective: 1 June 2025</p>
+
+  <div class="highlight">
+    <p>Roster is built to track your work hours and earnings. We collect only what is necessary to provide this service — nothing more.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Roster is developed and operated by <strong>Anits</strong>, based in India. You can reach us at <a href="https://anits.in">anits.in</a> or by email at the address listed at the bottom of this page.</p>
+
+  <h2>2. What information we collect</h2>
+  <p>We collect the following information when you create and use a Roster account:</p>
+  <ul>
+    <li><strong>Email address</strong> — used to create your account, sign in, and send password reset emails.</li>
+    <li><strong>First and last name</strong> — used to personalise your experience within the app (e.g. "Good morning, John").</li>
+    <li><strong>Country / region</strong> — used to detect public holidays relevant to your location and to set appropriate default pay rate settings.</li>
+    <li><strong>Shift and earnings data</strong> — times, dates, hours worked, job details, and earnings you log in the app. This data is stored securely and is only accessible to you.</li>
+  </ul>
+  <p>We do <strong>not</strong> collect phone numbers, physical addresses, payment card details, social media profiles, or any data from your contacts, camera, or microphone.</p>
+
+  <h2>3. How we use your information</h2>
+  <ul>
+    <li>To provide the Roster service — storing your shifts, calculating earnings, and syncing data across your devices.</li>
+    <li>To send you transactional emails — account confirmation and password resets only. We do not send marketing emails.</li>
+    <li>To detect relevant public holidays for your country so penalty rates are applied correctly.</li>
+    <li>To manage your subscription if you choose to subscribe to Roster Pro.</li>
+  </ul>
+  <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for advertising or marketing purposes.</p>
+
+  <h2>4. Data storage and security</h2>
+  <p>Your data is stored in two places:</p>
+  <ul>
+    <li><strong>On your device</strong> — an encrypted local database (SQLite) stores your shifts for offline access.</li>
+    <li><strong>In the cloud</strong> — your data is synced to <a href="https://supabase.com" target="_blank">Supabase</a>, a secure database platform hosted on AWS infrastructure. Data is encrypted in transit (HTTPS/TLS) and at rest.</li>
+  </ul>
+  <p>Authentication tokens are stored in your device's secure hardware-backed storage (Android Keystore), not in plain text. Your password is never stored — Supabase uses industry-standard bcrypt hashing.</p>
+
+  <h2>5. Third-party services</h2>
+  <p>Roster uses the following third-party services:</p>
+  <ul>
+    <li><strong>Supabase</strong> (<a href="https://supabase.com/privacy" target="_blank">Privacy Policy</a>) — database, authentication, and cloud sync.</li>
+    <li><strong>Google Play Billing</strong> (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>) — processes subscription payments. We do not store your payment card details.</li>
+    <li><strong>Nager.Date API</strong> — a public API used to fetch public holiday data for your country. No personal data is sent to this service.</li>
+  </ul>
+  <p>We do not use Google Analytics, Facebook Pixel, or any advertising or analytics trackers.</p>
+
+  <h2>6. Data retention</h2>
+  <p>We retain your data for as long as your account is active. If you delete your account, all your data — shifts, jobs, earnings history, and profile information — is permanently deleted from our servers within 30 days. Local data on your device is cleared immediately when you sign out or delete the app.</p>
+
+  <h2>7. Your rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li><strong>Access</strong> your data — export all your shift data as a CSV file from within the app at any time.</li>
+    <li><strong>Correct</strong> your data — edit any shift, job, or profile information directly in the app.</li>
+    <li><strong>Delete</strong> your data — use the "Delete account" option in Profile settings to permanently remove all your data.</li>
+    <li><strong>Data portability</strong> — export your data as CSV at any time from the app.</li>
+  </ul>
+
+  <h2>8. Children's privacy</h2>
+  <p>Roster is a workplace tool designed for adults. We do not knowingly collect personal information from anyone under the age of 15. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of Roster after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>10. Contact us</h2>
+  <div class="contact-box">
+    <h3>Questions about your privacy?</h3>
+    <p>Contact us at <a href="mailto:anitshub@anits.in">anitshub@anits.in</a> or visit <a href="https://anits.in">anits.in</a>. We aim to respond within 5 business days.</p>
+    <p style="margin-top:8px; font-size:14px; color:#666;">Anits · India</p>
+  </div>
+
+  <footer>
+    <p>© 2026 Anits. Roster app privacy policy.</p>
+    <p style="margin-top:6px;">
+      <a href="/roster/terms">Terms of Service</a> ·
+      <a href="https://anits.in">anits.in</a>
+    </p>
+  </footer>
+
+</body>
+</html>
