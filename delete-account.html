@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Roster Account</title>
+  <style>
+    :root {
+      --green: #1D9E75;
+      --green-dark: #085041;
+      --ink: #0D1F1A;
+      --muted: #4A6660;
+      --bg: #F4F3EF;
+      --card: #ffffff;
+      --border: #E3E8E5;
+      --amber-bg: #FFF8EC;
+      --amber-border: #F5A623;
+      --amber-ink: #7A5A1E;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+    header.brand {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 32px;
+    }
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px; background: var(--green);
+      color: #fff; font-weight: 700; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-name { font-size: 20px; font-weight: 700; color: var(--green-dark); letter-spacing: -0.3px; }
+    .brand-sub { font-size: 12px; color: #85C4AE; display: block; margin-top: 1px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px; box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    }
+    h1 { font-size: 26px; letter-spacing: -0.5px; margin: 0 0 8px; }
+    h2 { font-size: 17px; margin: 28px 0 8px; color: var(--green-dark); }
+    p, li { color: var(--muted); font-size: 15px; }
+    ol, ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .updated { font-size: 13px; color: #8A9E98; margin: 0 0 24px; }
+    .callout {
+      background: var(--amber-bg); border-left: 3px solid var(--amber-border);
+      border-radius: 8px; padding: 14px 16px; margin: 18px 0;
+    }
+    .callout p { margin: 0; color: var(--amber-ink); font-size: 14px; }
+    .steps { background: #F1FAF6; border: 1px solid #D6EEE4; border-radius: 10px; padding: 18px 18px 4px; }
+    a { color: var(--green); }
+    strong { color: var(--ink); }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 4px; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); font-size: 14px; }
+    th { color: var(--ink); font-weight: 600; }
+    td { color: var(--muted); }
+    footer {
+      margin-top: 32px; text-align: center; font-size: 12px; color: #A0ADA8;
+    }
+    footer a { color: #A0ADA8; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <div class="logo">R</div>
+      <div>
+        <span class="brand-name">Roster</span>
+        <span class="brand-sub">by Anits</span>
+      </div>
+    </header>
+
+    <div class="card">
+      <h1>Delete your account</h1>
+      <p class="updated">Applies to the Roster app (package <code>com.anits.rosterapp</code>).</p>
+
+      <p>
+        You can delete your Roster account and all associated data at any time.
+        This page explains how to request deletion, what happens to your data,
+        and how long anything is kept.
+      </p>
+
+      <h2>How to delete your account</h2>
+      <p>The quickest way is directly inside the app:</p>
+      <div class="steps">
+        <ol>
+          <li>Open the Roster app and sign in.</li>
+          <li>Go to <strong>Profile</strong> (bottom-right tab).</li>
+          <li>Scroll to <strong>Account</strong> &rarr; <strong>Delete account</strong>.</li>
+          <li>Follow the prompts and confirm.</li>
+        </ol>
+      </div>
+
+      <p style="margin-top:18px;">
+        If you no longer have access to the app (for example, you've uninstalled it
+        or can't sign in), email us at
+        <a href="mailto:veholabs@gmail.com">veholabs@gmail.com</a>
+        from the address associated with your account and ask us to delete it.
+        We'll action verified requests within 30 days.
+      </p>
+
+      <div class="callout">
+        <p>
+          &#9203; <strong>30-day grace period.</strong> When you delete your account it is
+          first <strong>scheduled</strong> for deletion. For 30 days you can restore
+          everything simply by logging back in — nothing is lost during this window.
+          After 30 days, your account and data are permanently removed.
+        </p>
+      </div>
+
+      <h2>What gets deleted</h2>
+      <p>After the 30-day grace period, the following are permanently deleted:</p>
+      <ul>
+        <li>Your account and login credentials</li>
+        <li>Your profile (name, country)</li>
+        <li>All jobs, shifts, and earnings history</li>
+        <li>All settings and preferences</li>
+      </ul>
+
+      <h2>What is kept, and for how long</h2>
+      <p>
+        To prevent abuse of free trials, we retain a limited record after deletion.
+        No readable personal data is kept — only a one-way hashed form of your email
+        address, which cannot be used to contact you or reconstruct your account.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Retention</th><th>Reason</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account &amp; all personal data</td>
+            <td>Deleted after 30-day grace</td>
+            <td>Account closure</td>
+          </tr>
+          <tr>
+            <td>Hashed email (non-reversible)</td>
+            <td>Up to 90 days</td>
+            <td>Prevent repeated free-trial abuse</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">
+        After 90 days, the hashed record is removed as well. You are free to create a
+        new Roster account with the same email address after that period.
+      </p>
+
+      <h2>Questions</h2>
+      <p>
+        For any questions about account deletion or your data, contact
+        <a href="mailto:veholabs@gmail.com">veholabs@gmail.com</a>.
+        See also our
+        <a href="https://veholabs.github.io/roster-legal/privacy.html">Privacy Policy</a>.
+      </p>
+    </div>
+
+    <footer>
+      &copy; 2025&ndash;2026 Anits ·
+      <a href="https://veholabs.github.io/roster-legal/privacy.html">Privacy</a> ·
+      <a href="https://veholabs.github.io/roster-legal/terms.html">Terms</a>
+    </footer>
+  </div>
+</body>
+</html>
