@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delete Your Account — Roster by Anits</title>
+  <meta name="description" content="How to delete your Roster: Shift & Pay Tracker account and data, with or without the app." />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -31,6 +32,7 @@
       margin: 36px 0 12px; padding-bottom: 8px;
       border-bottom: 1px solid #e8f5f0;
     }
+    h3.sub { font-size: 16px; font-weight: 600; color: #085041; margin: 20px 0 8px; }
     p { margin-bottom: 14px; color: #333; }
     ul, ol { margin: 0 0 14px 20px; color: #333; }
     li { margin-bottom: 6px; }
@@ -41,21 +43,84 @@
       padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0;
     }
     .highlight p { margin: 0; color: #085041; font-weight: 500; }
+    .warning {
+      background: #fff7ed; border-left: 3px solid #d97706;
+      padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0;
+    }
+    .warning p { margin: 0; color: #7c3d06; }
+    .warning p + p, .warning ul { margin-top: 8px; }
+    .warning ul { margin-bottom: 0; color: #7c3d06; font-size: 15px; }
     .info-box {
       background: #f7f6f3; border-radius: 10px;
       padding: 16px 20px; margin: 16px 0; border: 0.5px solid #e0ddd5;
     }
     .info-box p { margin: 0; font-size: 14px; }
-    .steps { background: #f0faf5; border: 0.5px solid #d6eee4; border-radius: 10px; padding: 18px 20px 6px; margin: 8px 0 16px; }
-    table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; }
-    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #eee; font-size: 14px; }
-    th { color: #085041; font-weight: 600; }
-    td { color: #333; }
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .option {
+      border: 1px solid #e0ddd5; border-radius: 12px; padding: 20px;
+      background: #fff;
+    }
+    .option .tag {
+      font-size: 12px; font-weight: 600; color: #1D9E75; text-transform: uppercase;
+      letter-spacing: 0.04em; margin-bottom: 4px;
+    }
+    .option h3 { font-size: 17px; color: #085041; margin-bottom: 8px; }
+    .option p { font-size: 14px; margin-bottom: 0; }
+    .timeline { list-style: none; margin: 16px 0 20px; padding: 0; }
+    .timeline li {
+      position: relative; padding: 0 0 18px 28px; margin: 0;
+      border-left: 2px solid #e8f5f0; margin-left: 8px;
+    }
+    .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -7px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #1D9E75; border: 2px solid #fff;
+    }
+    .timeline strong { color: #085041; display: block; }
+    .timeline span { font-size: 15px; color: #333; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+    .col { border-radius: 12px; padding: 18px 20px; }
+    .col.deleted { background: #f0faf5; }
+    .col.kept { background: #f7f6f3; }
+    .col h3 { font-size: 15px; color: #085041; margin-bottom: 8px; }
+    .col ul { font-size: 14px; margin-bottom: 0; }
+    form.request {
+      background: #f7f6f3; border-radius: 12px; padding: 24px; margin: 16px 0;
+    }
+    label { display: block; font-size: 14px; font-weight: 600; color: #085041; margin-bottom: 6px; }
+    input[type=email], input[type=text], select, textarea {
+      width: 100%; font: inherit; font-size: 15px; color: #1a1a1a;
+      padding: 10px 12px; border: 1px solid #d6d3cb; border-radius: 8px;
+      background: #fff; margin-bottom: 16px;
+    }
+    input:focus, select:focus, textarea:focus { outline: 2px solid #1D9E75; outline-offset: 1px; border-color: #1D9E75; }
+    textarea { min-height: 80px; resize: vertical; }
+    .check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #333; margin-bottom: 18px; }
+    .check input { margin-top: 5px; flex-shrink: 0; width: 16px; height: 16px; accent-color: #1D9E75; }
+    .hint { font-size: 13px; color: #777; margin: -10px 0 16px; }
+    button {
+      font: inherit; font-weight: 600; font-size: 15px; color: #fff;
+      background: #1D9E75; border: 0; border-radius: 10px;
+      padding: 12px 22px; cursor: pointer;
+    }
+    button:hover { background: #178a65; }
+    button:disabled { background: #a8d8c6; cursor: not-allowed; }
+    .error { color: #b42318; font-size: 14px; margin: -8px 0 14px; display: none; }
+    .sent {
+      display: none; background: #f0faf5; border-radius: 10px; padding: 16px 20px; margin-top: 16px;
+    }
+    .sent p { margin: 0; font-size: 14px; color: #085041; }
+    .sent p + p { margin-top: 8px; }
     .contact-box { background: #f7f6f3; border-radius: 12px; padding: 24px; margin-top: 40px; }
     .contact-box h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
     footer {
       margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee;
       font-size: 13px; color: #999;
+    }
+    @media (max-width: 600px) {
+      .options, .two-col { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
     }
   </style>
 </head>
@@ -67,73 +132,191 @@
   </div>
 
   <span class="badge">Account Deletion</span>
-  <h1>Delete your account</h1>
-  <p class="updated">Last updated: 15 July 2026 · Applies to the Roster app (com.anits.rosterapp)</p>
+  <h1>Delete your Roster account</h1>
+  <p class="updated">Roster: Shift &amp; Pay Tracker · Developed by Kolli Vana Sathya Kumari (Anits) · Last updated: 20 October 2026</p>
 
   <div class="highlight">
-    <p>You can delete your Roster account and all associated data at any time. This page explains how, and exactly what happens to your data.</p>
+    <p>You can delete your Roster account and all its data at any time, whether or not you still have the app installed. This page explains how to do it, what gets deleted, and when.</p>
   </div>
 
-  <h2>1. How to delete your account</h2>
-  <p>The quickest way is directly inside the app:</p>
-  <div class="steps">
-    <ol>
-      <li>Open the Roster app and sign in.</li>
-      <li>Go to <strong>Profile</strong> (bottom-right tab).</li>
-      <li>Scroll to <strong>Account</strong> &rarr; <strong>Delete account</strong>.</li>
-      <li>Follow the prompts and confirm.</li>
-    </ol>
-  </div>
-  <p>If you no longer have access to the app — for example, you've uninstalled it or can't sign in — email us at <a href="mailto:legal@anits.in">legal@anits.in</a> from the address associated with your account and ask us to delete it. We action verified requests within 30 days.</p>
-
-  <h2>2. 30-day grace period</h2>
-  <div class="info-box">
-    <p><strong>30-day grace period:</strong> When you delete your account it is first scheduled for deletion and enters a pending state. Your data remains intact and you can reactivate your account simply by signing in at any time during this window — nothing is lost.</p>
-  </div>
-  <div class="info-box">
-    <p><strong>After 30 days:</strong> All personal data is permanently and irreversibly deleted from our servers, including shifts, jobs, earnings history, name, and profile information.</p>
+  <div class="warning">
+    <p><strong>Cancel your subscription first.</strong> Deleting your account does <strong>not</strong> cancel a Roster Pro subscription, because Apple or Google bills you directly. To stop future charges:</p>
+    <ul>
+      <li><strong>iPhone / iPad:</strong> Settings → [your name] → Subscriptions → Roster → Cancel Subscription</li>
+      <li><strong>Android:</strong> Play Store → Profile → Payments &amp; subscriptions → Subscriptions → Roster → Cancel</li>
+    </ul>
   </div>
 
-  <h2>3. What gets deleted</h2>
-  <p>After the 30-day grace period, the following are permanently deleted:</p>
-  <ul>
-    <li>Your account and login credentials</li>
-    <li>Your profile (name, country)</li>
-    <li>All jobs, shifts, and earnings history</li>
-    <li>All settings and preferences</li>
+  <h2>1. Choose how to delete</h2>
+  <div class="options">
+    <div class="option">
+      <div class="tag">Fastest</div>
+      <h3>In the app</h3>
+      <p>Open Roster → <strong>Profile</strong> → <strong>Delete account</strong>, then confirm. Your account goes into pending deletion right away.</p>
+    </div>
+    <div class="option">
+      <div class="tag">No app needed</div>
+      <h3>Request it here</h3>
+      <p>Uninstalled the app or can't sign in? Use the <a href="#request">request form below</a> or email us from the address on your account.</p>
+    </div>
+  </div>
+
+  <h3 class="sub">Before you delete: export your data</h3>
+  <p>Once your data is permanently deleted, it can't be recovered. If you want to keep your records, export them first in the app as a CSV file.</p>
+
+  <h2 id="request">2. Request deletion without the app</h2>
+  <p>Fill in the form below. It opens a pre-written email in your email app, which you then send to us. <strong>Please send it from the email address you use for Roster</strong> so we can confirm the account is yours. We never ask for your password.</p>
+
+  <form class="request" id="deleteForm" novalidate>
+    <label for="email">Email address on your Roster account</label>
+    <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+    <p class="error" id="emailError">Please enter a valid email address.</p>
+
+    <label for="platform">Where did you use Roster?</label>
+    <select id="platform" name="platform">
+      <option value="iPhone / iPad">iPhone / iPad</option>
+      <option value="Android">Android</option>
+      <option value="Both">Both</option>
+      <option value="Not sure">Not sure</option>
+    </select>
+
+    <label for="reason">Reason for leaving (optional)</label>
+    <textarea id="reason" name="reason" placeholder="Anything we could do better? Totally optional."></textarea>
+
+    <div class="check">
+      <input type="checkbox" id="confirm" />
+      <label for="confirm" style="font-weight:400; color:#333; margin:0;">I understand that after the 30-day grace period, my shifts, jobs, earnings history and profile will be permanently deleted and cannot be recovered.</label>
+    </div>
+    <p class="error" id="confirmError">Please tick the box to confirm.</p>
+
+    <button type="submit" id="submitBtn">Open deletion email</button>
+
+    <div class="sent" id="sentBox" role="status" aria-live="polite">
+      <p><strong>Your email app should now be open with the request ready to send.</strong> Press Send to submit it.</p>
+      <p>If nothing opened, email <a href="mailto:anitshub@anits.in">anitshub@anits.in</a> from your Roster email address with the subject <em>"Roster account deletion request"</em>.</p>
+    </div>
+  </form>
+
+  <p>We'll confirm by email once your account is in pending deletion, usually within 5 business days. Requests are completed within 30 days at most.</p>
+
+  <h2>3. What happens next</h2>
+  <ul class="timeline">
+    <li>
+      <strong>Day 0: Pending deletion</strong>
+      <span>Your account is deactivated and you can't use the app, but your data is kept intact.</span>
+    </li>
+    <li>
+      <strong>Days 1–30: Grace period</strong>
+      <span>Changed your mind? Sign in to Roster and choose to reactivate. All your data is restored immediately.</span>
+    </li>
+    <li>
+      <strong>Day 30: Permanent deletion</strong>
+      <span>All your personal data is permanently deleted from our live systems and cannot be recovered.</span>
+    </li>
+    <li>
+      <strong>Day 90: Anti-abuse record removed</strong>
+      <span>The last record (an irreversible hash of your email address plus your device identifier, kept only to prevent repeat free trials) is deleted. After this you're free to create a new Roster account with the same email address.</span>
+    </li>
   </ul>
 
-  <h2>4. What is kept, and for how long</h2>
-  <div class="info-box">
-    <p><strong>Anti-abuse retention:</strong> A one-way SHA-256 cryptographic hash of your email address is retained for up to 90 days after deletion, used solely to prevent free trial abuse. The hash cannot be reversed to obtain your email address. After 90 days this record is also permanently deleted.</p>
+  <h2>4. What we delete and what we keep</h2>
+  <div class="two-col">
+    <div class="col deleted">
+      <h3>Deleted after 30 days</h3>
+      <ul>
+        <li>Name and email address</li>
+        <li>Country / region and profile settings</li>
+        <li>All shifts, jobs and pay rates</li>
+        <li>Earnings and payment-status history</li>
+        <li>Subscription status linked to your account</li>
+        <li>Promo code redemptions (Android)</li>
+      </ul>
+    </div>
+    <div class="col kept">
+      <h3>Kept temporarily, then deleted</h3>
+      <ul>
+        <li><strong>Up to 90 days:</strong> one-way SHA-256 hash of your email and your device identifier, used only to prevent free-trial abuse. The hash cannot be turned back into your email.</li>
+        <li><strong>Encrypted backups:</strong> overwritten on our normal backup cycle and never used for anything else.</li>
+        <li><strong>Transaction references:</strong> kept only where tax or accounting law requires it.</li>
+      </ul>
+    </div>
   </div>
-  <table>
-    <thead>
-      <tr><th>Data</th><th>Retention</th><th>Reason</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Account &amp; all personal data</td><td>Deleted after 30-day grace</td><td>Account closure</td></tr>
-      <tr><td>Hashed email (non-reversible)</td><td>Up to 90 days</td><td>Prevent repeated free-trial abuse</td></tr>
-    </tbody>
-  </table>
-  <p>You are free to create a new Roster account with the same email address after this 90-day period.</p>
-  <p>See our <a href="https://veholabs.github.io/roster-legal/privacy.html">Privacy Policy</a> and <a href="https://veholabs.github.io/roster-legal/terms.html">Terms of Service</a> for full details on how we handle your data.</p>
+  <div class="info-box">
+    <p><strong>Payment records</strong> are held by Apple or Google under their own privacy policies, not by us. <strong>Data on your device</strong> is removed when you uninstall Roster.</p>
+  </div>
 
-  <h2>5. Contact</h2>
+  <h2>5. Delete some data without closing your account</h2>
+  <p>You don't have to delete your whole account to remove specific information:</p>
+  <ul>
+    <li><strong>Shifts:</strong> open a shift in the app and delete it.</li>
+    <li><strong>Jobs:</strong> delete a job from your jobs list. You'll be asked what to do with its shifts.</li>
+    <li><strong>Profile details:</strong> edit your name or country in Profile.</li>
+    <li><strong>Anything else:</strong> email us and say what you'd like removed.</li>
+  </ul>
+
+  <p>For full details, see our <a href="https://veholabs.github.io/roster-legal/privacy.html#deletion">Privacy Policy</a>.</p>
+
   <div class="contact-box">
-    <h3>Questions about account deletion?</h3>
-    <p>Contact us at <a href="mailto:legal@anits.in">legal@anits.in</a> or visit <a href="https://anits.in">anits.in</a>. We aim to respond within 5 business days.</p>
-    <p style="margin-top:8px; font-size:14px; color:#666;">Anits · India</p>
+    <h3>Need help?</h3>
+    <p>Email <a href="mailto:anitshub@anits.in">anitshub@anits.in</a> or visit <a href="https://anits.in">anits.in</a>. We aim to reply within 5 business days.</p>
+    <p style="margin-top:8px; font-size:14px; color:#666;">Kolli Vana Sathya Kumari · Anits · India</p>
   </div>
 
   <footer>
-    <p>© 2026 Anits. Roster app account deletion policy.</p>
+    <p>© 2026 Anits. Roster account deletion.</p>
     <p style="margin-top:6px;">
       <a href="https://veholabs.github.io/roster-legal/privacy.html">Privacy Policy</a> ·
       <a href="https://veholabs.github.io/roster-legal/terms.html">Terms of Service</a> ·
       <a href="https://anits.in">anits.in</a>
     </p>
   </footer>
+
+  <script>
+    (function () {
+      var TO = 'anitshub@anits.in';
+      var form = document.getElementById('deleteForm');
+      var email = document.getElementById('email');
+      var platform = document.getElementById('platform');
+      var reason = document.getElementById('reason');
+      var confirmBox = document.getElementById('confirm');
+      var emailError = document.getElementById('emailError');
+      var confirmError = document.getElementById('confirmError');
+      var sentBox = document.getElementById('sentBox');
+
+      function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var addr = email.value.trim();
+        var ok = true;
+
+        emailError.style.display = validEmail(addr) ? 'none' : 'block';
+        if (!validEmail(addr)) ok = false;
+
+        confirmError.style.display = confirmBox.checked ? 'none' : 'block';
+        if (!confirmBox.checked) ok = false;
+
+        if (!ok) return;
+
+        var subject = 'Roster account deletion request';
+        var body =
+          'Hello,\n\n' +
+          'Please delete my Roster: Shift & Pay Tracker account.\n\n' +
+          'Account email: ' + addr + '\n' +
+          'Platform: ' + platform.value + '\n' +
+          (reason.value.trim() ? 'Reason: ' + reason.value.trim() + '\n' : '') +
+          '\nI understand my data will be permanently deleted after the 30-day grace period, ' +
+          'and that deleting my account does not cancel any App Store or Google Play subscription.\n\n' +
+          'Thank you.';
+
+        window.location.href = 'mailto:' + TO +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+
+        sentBox.style.display = 'block';
+      });
+    })();
+  </script>
 
 </body>
 </html>

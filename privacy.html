@@ -31,6 +31,7 @@
       margin: 36px 0 12px; padding-bottom: 8px;
       border-bottom: 1px solid #e8f5f0;
     }
+    h3.sub { font-size: 16px; font-weight: 600; color: #085041; margin: 20px 0 8px; }
     p { margin-bottom: 14px; color: #333; }
     ul { margin: 0 0 14px 20px; color: #333; }
     li { margin-bottom: 6px; }
@@ -46,8 +47,16 @@
       padding: 16px 20px; margin: 16px 0; border: 0.5px solid #e0ddd5;
     }
     .info-box p { margin: 0; font-size: 14px; }
+    .table-wrap { overflow-x: auto; margin: 16px 0 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e8f5f0; vertical-align: top; color: #333; }
+    th { background: #f0faf5; color: #085041; font-weight: 600; }
     .contact-box { background: #f7f6f3; border-radius: 12px; padding: 24px; margin-top: 40px; }
     .contact-box h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .toc { background: #f7f6f3; border-radius: 12px; padding: 20px 24px; margin: 24px 0 8px; }
+    .toc p { font-weight: 600; color: #085041; margin-bottom: 8px; }
+    .toc ol { margin: 0 0 0 20px; color: #333; font-size: 15px; }
+    .toc li { margin-bottom: 2px; }
     footer {
       margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee;
       font-size: 13px; color: #999;
@@ -63,101 +72,167 @@
 
   <span class="badge">Privacy Policy</span>
   <h1>Your privacy matters</h1>
-  <p class="updated">Last updated: 1 July 2026 · Effective: 1 July 2026</p>
+  <p class="updated">Last updated: 20 October 2026 · Effective: 20 October 2026</p>
 
   <div class="highlight">
-    <p>Roster is built to track your work hours and earnings. We collect only what is necessary to provide this service — nothing more.</p>
+    <p>Roster tracks your work hours and earnings. We collect only what we need to run the app. We don't show ads, we don't use analytics or tracking tools, and we never sell your data.</p>
   </div>
 
-  <h2>1. Who we are</h2>
-  <p>Roster is developed and operated by <strong>Anits</strong>, based in India. You can reach us at <a href="https://anits.in">anits.in</a> or by email at the address listed at the bottom of this page.</p>
+  <div class="toc">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#collect">What we collect</a></li>
+      <li><a href="#use">How we use it, and our legal basis</a></li>
+      <li><a href="#storage">Where your data is stored and how it's protected</a></li>
+      <li><a href="#third">Third-party services</a></li>
+      <li><a href="#permissions">Device permissions, notifications and cookies</a></li>
+      <li><a href="#deletion">Account deletion and data retention</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#breach">Data breaches</a></li>
+      <li><a href="#children">Age requirement</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </div>
 
-  <h2>2. What information we collect</h2>
-  <p>We collect the following information when you create and use a Roster account:</p>
+  <h2 id="who">1. Who we are</h2>
+  <p>Roster: Shift &amp; Pay Tracker ("Roster", "we", "us") is developed and operated by <strong>Kolli Vana Sathya Kumari</strong> under the Anits brand, an individual developer based in India. She is the data controller (called the "data fiduciary" under Indian law) for the personal data described in this policy, and this policy is governed by the laws of India.</p>
+  <p>Email: <a href="mailto:anitshub@anits.in">anitshub@anits.in</a><br>
+     Website: <a href="https://anits.in">anits.in</a></p>
+  <p>This policy applies to the Roster apps on iOS and Android and to this website.</p>
+
+  <h2 id="collect">2. What we collect</h2>
+
+  <h3 class="sub">Information you give us</h3>
   <ul>
-    <li><strong>Email address</strong> — used to create your account, sign in, and send password reset emails.</li>
-    <li><strong>First and last name</strong> — used to personalise your experience within the app.</li>
-    <li><strong>Country / region</strong> — used to detect public holidays and set appropriate default pay rate settings.</li>
-    <li><strong>Device identifier</strong> — a technical ID unique to your device, used to sync data across sessions and prevent trial abuse when creating new accounts. This is not linked to your name or personal identity.</li>
-    <li><strong>Shift and earnings data</strong> — times, dates, hours worked, job details, and earnings you log in the app. This data is stored securely and is only accessible to you.</li>
+    <li><strong>Email address</strong>: used to create your account, sign in, and send account emails such as confirmation and password reset.</li>
+    <li><strong>First and last name</strong>: used to personalise the app.</li>
+    <li><strong>Country / region</strong>: used to look up public holidays and set default pay-rate and currency settings.</li>
+    <li><strong>Shift, job and earnings data</strong>: shift dates and times, hours, breaks, job names, pay rates, penalty rates, earnings and payment status that you enter.</li>
+    <li><strong>Promo codes (Android only)</strong>: if you redeem a promo code in the Android app, we record the code and when you redeemed it. Promo codes can't be redeemed in the iOS app.</li>
+    <li><strong>Messages to us</strong>: if you email us, we keep the correspondence so we can help you.</li>
   </ul>
-  <p>We do <strong>not</strong> collect phone numbers, physical addresses, payment card details, social media profiles, or any data from your contacts, camera, or microphone.</p>
 
-  <h2>3. How we use your information</h2>
+  <h3 class="sub">Information collected automatically</h3>
   <ul>
-    <li>To provide the Roster service — storing your shifts, calculating earnings, and syncing data across your devices.</li>
-    <li>To send you transactional emails — account confirmation and password resets only. We do not send marketing emails.</li>
-    <li>To detect relevant public holidays for your country so penalty rates are applied correctly.</li>
-    <li>To manage your subscription if you choose to subscribe to Roster Pro.</li>
-    <li>To prevent trial abuse — ensuring each user receives only one free trial period.</li>
+    <li><strong>Device identifier</strong>: an app-specific technical ID for your device. It is linked to your account and is used to prevent abuse of the free trial (one trial per person) and to keep your sessions working. It is not an advertising identifier and is not used to track you across other apps or websites.</li>
+    <li><strong>Subscription information</strong>: when you subscribe to Roster Pro, the Apple App Store or Google Play tells us which plan you bought, its status, its renewal and expiry dates, and a transaction reference. We never receive your card or bank details.</li>
   </ul>
-  <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for advertising or marketing purposes.</p>
 
-  <h2>4. Data storage and security</h2>
-  <p>Your data is stored in two places:</p>
+  <h3 class="sub">What we don't collect</h3>
+  <p>We do <strong>not</strong> collect your phone number, physical address, location (GPS), contacts, photos, camera, microphone, health data, or advertising identifiers. We do not use analytics, crash-tracking or advertising software.</p>
+
+  <h2 id="use">3. How we use your information, and our legal basis</h2>
+  <p>Data protection laws such as the EU/UK GDPR require us to explain the legal reason ("legal basis") for each use of your data:</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>What we do</th><th>Data used</th><th>Legal basis</th></tr>
+      <tr><td>Create and run your account, store and sync your shifts, calculate earnings</td><td>Email, name, country, shift and earnings data</td><td>Performance of our contract with you (the Terms of Service)</td></tr>
+      <tr><td>Send account emails (confirmation, password reset)</td><td>Email</td><td>Performance of contract</td></tr>
+      <tr><td>Look up public holidays so penalty rates apply correctly</td><td>Country only</td><td>Performance of contract</td></tr>
+      <tr><td>Provide and verify your Roster Pro subscription, or a promo code redeemed on Android</td><td>Subscription information, promo codes</td><td>Performance of contract</td></tr>
+      <tr><td>Prevent free-trial abuse and keep the service secure</td><td>Device identifier, hashed email</td><td>Our legitimate interest in preventing fraud and misuse</td></tr>
+      <tr><td>Reply to your support requests</td><td>Email, correspondence</td><td>Legitimate interest / performance of contract</td></tr>
+      <tr><td>Keep records required by law (for example, tax)</td><td>Transaction references</td><td>Legal obligation</td></tr>
+    </table>
+  </div>
+  <p>We do <strong>not</strong> send marketing emails, and we do not sell, rent or share your personal data for advertising or marketing. If we ever want to send you marketing, we will ask for your consent first, and you can withdraw it at any time.</p>
+
+  <h2 id="storage">4. Where your data is stored and how it's protected</h2>
   <ul>
-    <li><strong>On your device</strong> — an encrypted local database (SQLite) stores your shifts for offline access.</li>
-    <li><strong>In the cloud</strong> — your data is synced to <a href="https://supabase.com" target="_blank">Supabase</a>, a secure database platform hosted on AWS infrastructure. Data is encrypted in transit (HTTPS/TLS) and at rest.</li>
+    <li><strong>On your device</strong>: your shifts are kept in a local database inside the app's private storage so the app works offline. This storage is protected by your device's built-in encryption and screen lock.</li>
+    <li><strong>In the cloud</strong>: your data is synced to <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>, which runs on Amazon Web Services in the Asia Pacific (Mumbai) region in India. Data is encrypted in transit (HTTPS/TLS) and at rest.</li>
+    <li><strong>Sign-in session</strong>: your sign-in session is kept in the app's private storage on your device, which other apps can't access and which is protected by your device's built-in encryption. Your App Lock setting is kept in your device's secure storage (iOS Keychain or Android Keystore).</li>
+    <li><strong>Passwords</strong>: we never store your password in readable form. It is stored only as a one-way bcrypt hash.</li>
+    <li><strong>Access controls</strong>: database rules ensure each account can access only its own data. We access account data only when needed to provide support you ask for, to investigate abuse or a security issue, or when the law requires it.</li>
   </ul>
-  <p>Authentication tokens are stored in your device's secure hardware-backed storage (Android Keystore), not in plain text. Your password is never stored — Supabase uses industry-standard bcrypt hashing.</p>
+  <p><strong>International transfers.</strong> Your account and shift data is stored in India. If you live elsewhere, this means your data is processed in a country other than your own. Account emails are sent through Resend, which may process your email address outside India, including in the United States. Where data protection law requires it (for example for users in the EU or UK), we rely on appropriate safeguards such as the European Commission's Standard Contractual Clauses included in our data processing agreements with Supabase and Resend.</p>
+  <p>No system is perfectly secure, but we follow industry-standard practices and review them regularly.</p>
 
-  <h2>5. Account deletion and data retention</h2>
-  <p>You can request account deletion at any time from Profile → Delete account. When you do:</p>
+  <h2 id="third">5. Third-party services</h2>
+  <p>We share data only with these service providers, and only as much as they need to do their job:</p>
+  <ul>
+    <li><strong>Supabase</strong> (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>): database, sign-in and cloud sync. Supabase processes data on our behalf under a data processing agreement.</li>
+    <li><strong>Resend</strong> (<a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>): delivers account emails such as sign-up confirmation and password reset. Resend receives only your email address and the content of those emails, and processes them on our behalf under a data processing agreement.</li>
+    <li><strong>Apple App Store</strong> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>): processes subscription payments on iOS. Apple is responsible for your payment details.</li>
+    <li><strong>Google Play Billing</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>): processes subscription payments on Android. Google is responsible for your payment details.</li>
+    <li><strong>Nager.Date</strong>: a public API that provides public holiday data. We request holidays by country code only. No personal data is sent.</li>
+  </ul>
+  <p>We may also disclose data if required by law, court order or a valid request from a government authority, or to protect the rights and safety of our users or ourselves. If Roster is ever sold or transferred to another owner, your data would transfer under this policy and we would tell you first.</p>
+
+  <h2 id="permissions">6. Device permissions, notifications and cookies</h2>
+  <ul>
+    <li><strong>Notifications</strong>: if you allow them, Roster sends shift reminders. These are scheduled on your device. They are not marketing, and you can turn them off at any time in the app or in your device settings.</li>
+    <li><strong>Face ID / Touch ID / fingerprint (App Lock)</strong>: if you turn on App Lock, your device's operating system checks your biometrics. Roster never receives, stores or sends your biometric data. It only gets a "success" or "fail" result.</li>
+    <li><strong>No tracking</strong>: Roster does not track you across apps or websites owned by other companies, so it does not ask for tracking permission.</li>
+    <li><strong>Cookies</strong>: the Roster app does not use cookies. This legal website is a static page and does not set cookies, so no cookie consent is needed.</li>
+  </ul>
+
+  <h2 id="deletion">7. Account deletion and data retention</h2>
+  <p>You can delete your account in either of these ways:</p>
+  <ul>
+    <li><strong>In the app</strong>: go to Profile → Delete account.</li>
+    <li><strong>Without the app</strong>: use our <a href="https://veholabs.github.io/roster-legal/delete-account.html">account deletion page</a> or email <a href="mailto:anitshub@anits.in">anitshub@anits.in</a> from the email address on your account.</li>
+  </ul>
 
   <div class="info-box">
-    <p><strong>30-day grace period</strong> — Your account is placed in a pending deletion state. Your data remains intact and you can reactivate your account at any time during this window by signing back in.</p>
+    <p><strong>Important: deleting your account does not cancel your subscription.</strong> Subscriptions are billed by Apple or Google, so please cancel in your Apple ID settings (Settings → [your name] → Subscriptions) or in Google Play (Play Store → Payments &amp; subscriptions → Subscriptions) to stop future charges.</p>
   </div>
 
   <div class="info-box">
-    <p><strong>After 30 days</strong> — All personal data is permanently deleted from our servers. This includes your shifts, jobs, earnings history, name, country, and all profile information.</p>
+    <p><strong>30-day grace period</strong>: your account is placed in a pending-deletion state and you cannot use the app. Your data stays intact, and you can reactivate the account and restore everything by signing in again during this period.</p>
   </div>
 
   <div class="info-box">
-    <p><strong>Anti-abuse retention (90 days)</strong> — A one-way SHA-256 cryptographic hash of your email address and your device identifier are retained for up to 90 days after deletion. This is used solely to prevent free trial abuse (e.g. repeatedly creating accounts to obtain new trials). The hash cannot be reversed to obtain your original email address — it is mathematically impossible to reconstruct the email from the hash.</p>
+    <p><strong>After 30 days</strong>: all your personal data is permanently deleted from our live systems, including your shifts, jobs, earnings history, name, email, country and profile.</p>
   </div>
 
   <div class="info-box">
-    <p><strong>After 90 days</strong> — All remaining records including the hash are permanently deleted. No data about your account is retained after this point.</p>
+    <p><strong>Anti-abuse record (up to 90 days)</strong>: a one-way SHA-256 hash of your email address, together with your device identifier, is kept for up to 90 days after deletion. It is used only to stop the same person from repeatedly creating accounts to get new free trials. The hash cannot be turned back into your email address.</p>
   </div>
 
-  <p>During the 30-day grace period, access to the app is disabled. To reactivate simply sign in again — you will be presented with a reactivation option and all your data will be restored immediately.</p>
+  <div class="info-box">
+    <p><strong>After 90 days</strong>: these remaining records are permanently deleted as well.</p>
+  </div>
 
-  <h2>6. Third-party services</h2>
-  <p>Roster uses the following third-party services:</p>
+  <p><strong>Backups and records we must keep:</strong> deleted data may remain in encrypted backups for up to 30 days until those backups are overwritten. Backups are not used for any other purpose. Purchase and transaction records may be kept longer where tax or accounting law requires it. Data on your own device is removed when you uninstall the app.</p>
+  <p>While your account is active, we keep your data for as long as you use Roster.</p>
+
+  <h2 id="rights">8. Your rights</h2>
+  <p>You can do the following at any time, most of it directly in the app:</p>
   <ul>
-    <li><strong>Supabase</strong> (<a href="https://supabase.com/privacy" target="_blank">Privacy Policy</a>) — database, authentication, and cloud sync.</li>
-    <li><strong>Google Play Billing</strong> (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>) — processes subscription payments. We do not store your payment card details.</li>
-    <li><strong>Nager.Date API</strong> — a public API used to fetch public holiday data for your country. No personal data is sent to this service.</li>
+    <li><strong>Access and portability</strong>: export your shift data as a CSV file from the app, or ask us for a copy of all the personal data we hold about you.</li>
+    <li><strong>Correction</strong>: edit your shifts, jobs and profile in the app, or ask us to correct anything else.</li>
+    <li><strong>Deletion</strong>: delete your account as described in section 7.</li>
+    <li><strong>Objection and restriction</strong>: object to processing based on our legitimate interests, or ask us to limit how we use your data.</li>
+    <li><strong>Withdraw consent</strong>: where we rely on your consent (for example, notifications), you can withdraw it at any time.</li>
+    <li><strong>Grievance and nomination (India)</strong>: raise a grievance with us using the contact details below and, under India's Digital Personal Data Protection Act, nominate another person to exercise your rights if you die or become unable to.</li>
+    <li><strong>Complain to a regulator</strong>: if you're unhappy with how we handled your data, you can complain to your local data protection authority. In India this is the Data Protection Board of India; in the EU, your national supervisory authority; in the UK, the ICO; and in Australia, the OAIC. We'd appreciate the chance to fix things first.</li>
   </ul>
-  <p>We do not use Google Analytics, Facebook Pixel, or any advertising or analytics trackers.</p>
+  <p>To make a request, email <a href="mailto:anitshub@anits.in">anitshub@anits.in</a>. We may need to confirm it's really you, and we'll respond within 30 days.</p>
 
-  <h2>7. Your rights</h2>
-  <p>You have the right to:</p>
-  <ul>
-    <li><strong>Access</strong> your data — export all your shift data as a CSV file from within the app at any time.</li>
-    <li><strong>Correct</strong> your data — edit any shift, job, or profile information directly in the app.</li>
-    <li><strong>Delete</strong> your data — use the "Delete account" option in Profile settings to permanently remove all your data.</li>
-    <li><strong>Reactivate</strong> — if you request deletion, you have 30 days to reactivate your account and recover all data before it is permanently deleted.</li>
-    <li><strong>Data portability</strong> — export your data as CSV at any time from the app.</li>
-  </ul>
+  <h2 id="breach">9. Data breaches</h2>
+  <p>If a security incident affects your personal data, we will act quickly to contain it. We will notify the relevant authorities within the time the law requires (for example, within 72 hours under GDPR, and to the Data Protection Board of India under Indian law). We will also tell affected users without undue delay what happened, what data was involved, and what steps to take.</p>
 
-  <h2>8. Children's privacy</h2>
-  <p>Roster is a workplace tool designed for adults. We do not knowingly collect personal information from anyone under the age of 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+  <h2 id="children">10. Age requirement</h2>
+  <p>Roster is a work tool for people aged <strong>16 or older</strong>. We do not knowingly collect personal data from anyone younger. If you believe a child has created an account, please contact us and we will delete it promptly.</p>
 
-  <h2>9. Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. Continued use of Roster after changes constitutes acceptance of the updated policy.</p>
+  <h2 id="changes">11. Changes to this policy</h2>
+  <p>We may update this policy as Roster or the law changes. If we make material changes, we will notify you in the app before they take effect and update the "Last updated" date above. Where the law requires your consent to a change, we will ask for it.</p>
 
-  <h2>10. Contact us</h2>
+  <h2 id="contact">12. Contact us</h2>
   <div class="contact-box">
-    <h3>Questions about your privacy?</h3>
-    <p>Contact us at <a href="mailto:anitshub@anits.in">privacy@anits.in</a> or visit <a href="https://anits.in">anits.in</a>. We aim to respond within 5 business days.</p>
-    <p style="margin-top:8px; font-size:14px; color:#666;">Anits · India</p>
+    <h3>Questions, requests or complaints about your privacy?</h3>
+    <p>Email <a href="mailto:anitshub@anits.in">anitshub@anits.in</a> or visit <a href="https://anits.in">anits.in</a>. Privacy and grievance contact: Kolli Vana Sathya Kumari. We aim to reply within 5 business days, and we will resolve formal requests within 30 days.</p>
+    <p style="margin-top:8px; font-size:14px; color:#666;">Kolli Vana Sathya Kumari · Anits · India</p>
   </div>
 
   <footer>
     <p>© 2026 Anits. Roster app privacy policy.</p>
     <p style="margin-top:6px;">
       <a href="https://veholabs.github.io/roster-legal/terms.html">Terms of Service</a> ·
+      <a href="https://veholabs.github.io/roster-legal/delete-account.html">Delete your account</a> ·
       <a href="https://anits.in">anits.in</a>
     </p>
   </footer>
