@@ -72,7 +72,7 @@
 
   <span class="badge">Privacy Policy</span>
   <h1>Your privacy matters</h1>
-  <p class="updated">Roster: Shift &amp; Pay Tracker · App version 1.0.0 · Last updated: 20 October 2026 · Effective: 20 October 2026</p>
+  <p class="updated">Roster: Shift &amp; Pay Tracker · App version 1.0.0 · Last updated: 8 November 2026 · Effective: 8 November 2026</p>
 
   <div class="highlight">
     <p>Roster tracks your work hours and earnings. We collect only what we need to run the app. We don't show ads, we don't use analytics or tracking tools, and we never sell your data.</p>
@@ -106,18 +106,18 @@
 
   <h3 class="sub">Information you give us</h3>
   <ul>
-    <li><strong>Email address</strong>: used to create your account, sign in, and send account emails such as confirmation and password reset.</li>
+    <li><strong>Email address</strong>: used to create your account, sign in, and send account emails such as confirmation and password reset. If you use Sign in with Apple and choose "Hide My Email", we receive an Apple relay address instead of your real one.</li>
     <li><strong>First and last name</strong>: used to personalise the app.</li>
-    <li><strong>Country / region</strong>: used to look up public holidays and set default pay-rate and currency settings.</li>
+    <li><strong>Country</strong>: the country on your profile and on each job. Each job uses its own country's public holidays and currency. When you sign up or add a job, Roster suggests a country from your phone's region setting; you can change it.</li>
     <li><strong>Shift, job and earnings data</strong>: shift dates and times, hours, breaks, job names, pay rates, penalty rates, earnings and payment status that you enter.</li>
-    <li><strong>Promo codes (Android only)</strong>: if you redeem a promo code in the Android app, we record the code and when you redeemed it. Promo codes can't be redeemed in the iOS app.</li>
     <li><strong>Messages to us</strong>: if you email us, we keep the correspondence so we can help you.</li>
   </ul>
 
   <h3 class="sub">Information collected automatically</h3>
   <ul>
-    <li><strong>Device identifier</strong>: an app-specific technical ID for your device. It is linked to your account and is used to prevent abuse of the free trial (one trial per person) and to keep your sessions working. It is not an advertising identifier and is not used to track you across other apps or websites.</li>
-    <li><strong>Subscription information</strong>: when you subscribe to Roster Pro, the Apple App Store or Google Play tells us which plan you bought, its status, its renewal and expiry dates, and a transaction reference. We never receive your card or bank details.</li>
+    <li><strong>Sync device ID</strong>: a random ID that Roster creates when it is first installed on a device. It is saved with the shifts you log on that device so that, if you use Roster on more than one device, we can detect and resolve conflicting edits. It is not an advertising identifier, is not linked to your device's hardware, and is not used to track you.</li>
+    <li><strong>Sign in with Apple token</strong> (iOS): if you sign in with Apple, we keep a token from Apple so that we can tell Apple to disconnect Roster from your Apple ID when you delete your account. It is stored on our server only and deleted with your account.</li>
+    <li><strong>Subscription information</strong>: when you subscribe to Roster Pro or restore a purchase, our server checks the purchase directly with Apple or Google, and Apple notifies our server when your subscription renews, enters a billing grace period, expires or is refunded. We store the plan, its status and expiry date, and the store's original transaction reference, which links the subscription to one Roster account so it can't be shared between accounts. We never receive your card or bank details.</li>
   </ul>
 
   <h3 class="sub">What we don't collect</h3>
@@ -131,8 +131,10 @@
       <tr><td>Create and run your account, store and sync your shifts, calculate earnings</td><td>Email, name, country, shift and earnings data</td><td>Performance of our contract with you (the Terms of Service)</td></tr>
       <tr><td>Send account emails (confirmation, password reset)</td><td>Email</td><td>Performance of contract</td></tr>
       <tr><td>Look up public holidays so penalty rates apply correctly</td><td>Country only</td><td>Performance of contract</td></tr>
-      <tr><td>Provide and verify your Roster Pro subscription, or a promo code redeemed on Android</td><td>Subscription information, promo codes</td><td>Performance of contract</td></tr>
-      <tr><td>Prevent free-trial abuse and keep the service secure</td><td>Device identifier, hashed email</td><td>Our legitimate interest in preventing fraud and misuse</td></tr>
+      <tr><td>Provide and verify your Roster Pro subscription, keep it up to date when it renews, and stop one purchase being used by several accounts</td><td>Subscription information</td><td>Performance of contract</td></tr>
+      <tr><td>Sync your data across your devices and resolve conflicting edits</td><td>Sync device ID, shift data</td><td>Performance of contract</td></tr>
+      <tr><td>Disconnect Sign in with Apple when you delete your account</td><td>Sign in with Apple token</td><td>Performance of contract / legal obligation (Apple's requirements)</td></tr>
+      <tr><td>Prevent free-trial abuse and keep the service secure</td><td>Hashed email (after account deletion)</td><td>Our legitimate interest in preventing fraud and misuse</td></tr>
       <tr><td>Reply to your support requests</td><td>Email, correspondence</td><td>Legitimate interest / performance of contract</td></tr>
       <tr><td>Keep records required by law (for example, tax)</td><td>Transaction references</td><td>Legal obligation</td></tr>
     </table>
@@ -155,15 +157,15 @@
   <ul>
     <li><strong>Supabase</strong> (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>): database, sign-in and cloud sync. Supabase processes data on our behalf under a data processing agreement.</li>
     <li><strong>Resend</strong> (<a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>): delivers account emails such as sign-up confirmation and password reset. Resend receives only your email address and the content of those emails, and processes them on our behalf under a data processing agreement.</li>
-    <li><strong>Apple App Store</strong> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>): processes subscription payments on iOS. Apple is responsible for your payment details.</li>
-    <li><strong>Google Play Billing</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>): processes subscription payments on Android. Google is responsible for your payment details.</li>
+    <li><strong>Apple</strong> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>): processes subscription payments on iOS and provides Sign in with Apple. Apple is responsible for your payment details. Our server sends Apple purchase references to check subscriptions, and your Sign in with Apple token to disconnect it when you delete your account.</li>
+    <li><strong>Google</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>): processes subscription payments on Android through Google Play and provides Sign in with Google on Android. Google is responsible for your payment details. Our server sends Google Play purchase references to check subscriptions.</li>
     <li><strong>Nager.Date</strong>: a public API that provides public holiday data. We request holidays by country code only. No personal data is sent.</li>
   </ul>
   <p>We may also disclose data if required by law, court order or a valid request from a government authority, or to protect the rights and safety of our users or ourselves. If Roster is ever sold or transferred to another owner, your data would transfer under this policy and we would tell you first.</p>
 
   <h2 id="permissions">6. Device permissions, notifications and cookies</h2>
   <ul>
-    <li><strong>Notifications</strong>: if you allow them, Roster sends shift reminders. These are scheduled on your device. They are not marketing, and you can turn them off at any time in the app or in your device settings.</li>
+    <li><strong>Notifications</strong>: if you allow them, Roster sends shift reminders, pay day alerts and reminders about shifts that haven't been paid. These are scheduled on your device; we don't use push notification services. They are not marketing, and you can turn them off at any time in the app or in your device settings.</li>
     <li><strong>Face ID / Touch ID / fingerprint (App Lock)</strong>: if you turn on App Lock, your device's operating system checks your biometrics. Roster never receives, stores or sends your biometric data. It only gets a "success" or "fail" result.</li>
     <li><strong>No tracking</strong>: Roster does not track you across apps or websites owned by other companies, so it does not ask for tracking permission.</li>
     <li><strong>Cookies</strong>: the Roster app does not use cookies. This legal website is a static page and does not set cookies, so no cookie consent is needed.</li>
@@ -185,11 +187,11 @@
   </div>
 
   <div class="info-box">
-    <p><strong>After 30 days</strong>: all your personal data is permanently deleted from our live systems, including your shifts, jobs, earnings history, name, email, country and profile.</p>
+    <p><strong>After 30 days</strong>: all your personal data is permanently deleted from our live systems, including your shifts, jobs, earnings history, name, email, country, profile, subscription records and any Sign in with Apple token. If you signed in with Apple, we also tell Apple to disconnect Roster from your Apple ID when you delete your account.</p>
   </div>
 
   <div class="info-box">
-    <p><strong>Anti-abuse record (up to 90 days)</strong>: a one-way SHA-256 hash of your email address, together with your device identifier, is kept for up to 90 days after deletion. It is used only to stop the same person from repeatedly creating accounts to get new free trials. The hash cannot be turned back into your email address.</p>
+    <p><strong>Anti-abuse record (up to 90 days)</strong>: a one-way SHA-256 hash of your email address, and whether you used the free trial, are kept for up to 90 days after deletion. They are kept only to help prevent the same person repeatedly creating accounts to get new free trials. The hash cannot be turned back into your email address.</p>
   </div>
 
   <div class="info-box">
